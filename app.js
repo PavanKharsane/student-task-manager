@@ -1,5 +1,7 @@
 const API = "/api/tasks"
 
+function loadTasks() {
+
     fetch(API)
         .then(res => res.json())
         .then(data => {
@@ -7,11 +9,20 @@ const API = "/api/tasks"
             const list = document.getElementById("taskList")
             list.innerHTML = ""
 
-            data.forEach(t => {
+            data.forEach(task => {
 
                 const li = document.createElement("li")
 
-                li.innerText = t.task
+                li.innerText = task.task
+
+                const del = document.createElement("button")
+
+                del.innerText = "Delete"
+                del.className = "delete-btn"
+
+                del.onclick = () => deleteTask(task.id)
+
+                li.appendChild(del)
 
                 list.appendChild(li)
 
@@ -36,6 +47,15 @@ function addTask() {
             input.value = ""
             loadTasks()
         })
+
+}
+
+function deleteTask(id) {
+
+    fetch(API + "/" + id, {
+        method: "DELETE"
+    })
+        .then(() => loadTasks())
 
 }
 
