@@ -3,17 +3,25 @@
 
 <head>
     <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Task Manager</h1>
+    <div class="container">
 
-    <input id="taskInput" placeholder="Add task">
+        <h1>Task Manager</h1>
 
-    <button onclick="addTask()">Add</button>
+        <div class="task-input">
 
-    <ul id="taskList"></ul>
+            <input id="taskInput" placeholder="Enter new task">
+            <button onclick="addTask()">Add Task</button>
+
+        </div>
+
+        <ul id="taskList"></ul>
+
+    </div>
 
     <script src="app.js"></script>
 
