@@ -1,6 +1,4 @@
-const API = "http://localhost:3000/api/tasks"
-
-function loadTasks() {
+const API = "/api/tasks"
 
     fetch(API)
         .then(res => res.json())
