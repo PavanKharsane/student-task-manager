@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header>
+            <h1>🚀 Student Task Manager</h1>
+            <p>Manage your DevOps learning tasks</p>
+        </header>
+
+        <div class="task-container">
+
+            <div class="input-section">
+
+                <input id="taskInput" placeholder="Enter a new task...">
+
+                <button onclick="addTask()">Add Task</button>
+
+            </div>
+
+            <div class="stats">
+
+                <span id="taskCount">0 Tasks</span>
+
+            </div>
+
+            <ul id="taskList"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
